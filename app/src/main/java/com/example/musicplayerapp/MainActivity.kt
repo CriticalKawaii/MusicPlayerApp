@@ -18,7 +18,7 @@ import com.spotify.protocol.types.Track;
 class MainActivity : AppCompatActivity() {
 
     private val clientId = "8a35e6c1d45243d183d763ad86f85771"
-    private val redirectUri = "myapp://callback"
+    private val redirectUri = "https://com.example.musicplayerapp/callback\n"
     private var spotifyAppRemote: SpotifyAppRemote? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
