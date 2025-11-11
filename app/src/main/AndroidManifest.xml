@@ -37,9 +37,9 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:scheme="myapp"
-                    android:host="callback"
-                    tools:ignore="AppLinkUrlError" />
+                    android:scheme="http"
+                    android:host="com.example.musicplayerapp"
+                    android:path="/callback" />
             </intent-filter>
         </activity>
     </application>
