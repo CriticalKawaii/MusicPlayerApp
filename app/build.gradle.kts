@@ -11,12 +11,16 @@ android {
 
     defaultConfig {
         applicationId = "com.example.musicplayerapp"
-        minSdk = 31
+        minSdk = 26
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures{
+        viewBinding = true
     }
 
     buildTypes {
@@ -42,13 +46,23 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
-    implementation (libs.gson)
-    implementation(files("C:/Users/sarga/Desktop/MusicPlayerApp/app/src/main/libs/spotify-app-remote-release-0.8.0.aar"))
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-
     implementation(libs.androidx.browser)
 
+    implementation(libs.androidx.constraintlayout)
+
+    implementation(files("src/main/libs/spotify-app-remote-release-0.8.0.aar"))
     implementation(libs.auth)
+
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.logging.interceptor)
+
+    implementation (libs.gson)
+
+    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+
+    androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(libs.androidx.junit)
+    testImplementation(libs.junit)
 }
